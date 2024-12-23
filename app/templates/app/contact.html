@@ -1,0 +1,30 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2 style="margin-top: 50px">{{ title }}.</h2>
+<h3>{{ message }}</h3>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h4>Наш адрес</h4>
+            <address>
+                <strong>Сад вкусов</strong><br />
+                Инженерная, 110<br />
+                <abbr title="Phone">Телефон:</abbr> 79113664383
+                <br>
+                <abbr title="Phone">Другой телефон:</abbr> 425.555.0100
+            </address>
+        </div>
+        <div class="col-md-6">
+            <h4>Контакты</h4>
+            <address>
+                <strong>Техническая поддержка:</strong> <a href="mailto:Support@example.com">pdanilap@inbox.ru</a><br />
+                <strong>Отдел маркетинга:</strong> <a href="mailto:Marketing@example.com">potapovdaniil@gmail.com</a>
+            </address>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

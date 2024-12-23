@@ -1,0 +1,77 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Регистрация пользователя</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form method="POST" class="card p-4 shadow">
+                {% csrf_token %}
+                {{ regform.as_p }}
+                <div class="text-center mt-3">
+                    <button type="submit" class="btn btn-success">Зарегистрировать</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+      const inputs = document.querySelectorAll('input, textarea, select');
+    inputs.forEach(input => {
+        input.addEventListener('focus', function() {
+            this.classList.add('is-focused');
+        });
+        input.addEventListener('blur', function() {
+            this.classList.remove('is-focused');
+        });
+    });
+    const submitBtn = document.querySelector('button[type="submit"]');
+       if (submitBtn) {
+          submitBtn.addEventListener('mouseover', function() {
+             this.style.backgroundColor = 'darkgreen';
+            this.style.borderColor = 'darkgreen';
+         });
+           submitBtn.addEventListener('mouseout', function() {
+             this.style.backgroundColor = 'green';
+             this.style.borderColor = 'green';
+         });
+      }
+</script>
+
+<style>
+    .form-control {
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        padding: 0.7rem 1rem;
+        font-size: 1rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        margin-top: 0.5rem;
+    }
+
+        .form-control:focus {
+            border-color: #80bdff;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+
+    textarea.form-control {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .is-focused {
+        background-color: #f8f9fa;
+        border-color: #80bdff;
+    }
+
+    .card p {
+        margin-bottom: 1rem;
+    }
+</style>
+
+{% endblock %}

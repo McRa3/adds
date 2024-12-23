@@ -1,0 +1,28 @@
+{% extends "app/layout.html" %}
+
+{% load static %}
+
+{% block content %}
+<div>
+    <b>{{ title }}</b>
+</div>
+
+<hr />
+
+<div class="column">
+    <h2>Ужин в ресторане:</h2>
+    <VIDEO src="/media/обед.mp4" controls="controls" width="400" height="300" poster="/media/превью_1.jpg"></VIDEO>
+    <p> <br /> Насладитесь романтической обстановкой у нас. <i> Средний чек составляет 700 рублей.</i></p>
+</div>
+
+<hr />
+
+<div class="column">
+    <h2>Огромный выбор алкогольных напитков</h2>
+    <VIDEO src="/media/бокалы.mp4" controls="controls" width="400" height="300" poster="/media/превью_2.jpg"></VIDEO>
+    <p>
+        <br />
+        У нас пополнение в баре.<i>Стоимость от 200 рубелй за бокал.</i>
+    </p>
+</div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "app/layout.html" %}
+
+{% load static %}
+
+{% block content %}
+<div class="container mt-4" style="margin-top: 50px">
+    <h2 class="text-center mb-4">Список ресурсов о рекламе:</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow">
+                <div class="card-body d-flex flex-column align-items-center justify-content-between">
+                    <img src="{% static 'app/content/Tripadvisor.svg' %}" alt="Tripadvisor" class="img-fluid mb-3" style="max-width: 100px; max-height: 100px;">
+                    <div class="w-100 text-center">
+                        <a href="https://www.tripadvisor.ru/" target="_blank" class="btn btn-primary btn-sm">Перейти</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow">
+                <div class="card-body d-flex flex-column align-items-center justify-content-between">
+                    <img src="{% static 'app/content/zoon.svg' %}" alt="ZOON" class="img-fluid mb-3" style="max-width: 100px; max-height: 100px;">
+                    <div class="w-100 text-center">
+                        <a href="https://zoon.ru/pskov/restaurants/reviews/" target="_blank" class="btn btn-primary btn-sm">Перейти</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow">
+                <div class="card-body d-flex flex-column align-items-center justify-content-between">
+                    <img src="{% static 'app/content/чиббис.jpeg' %}" alt="chiббis" class="img-fluid mb-3" style="max-width: 100px; max-height: 100px;">
+                    <div class="w-100 text-center">
+                        <a href="https://chibbis.ru/pskov?utm_source=yandex&utm_medium=cpc&utm_campaign=cid%7C111225202%7Csearch&utm_content=gid%7C5451455332%7Caid%7C16174940867%7C51958832645_51958832645&utm_term=---autotargeting&pm_source=none&pm_block=premium&pm_position=1" target="_blank" class="btn btn-primary btn-sm">Перейти</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
