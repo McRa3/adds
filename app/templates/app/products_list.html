@@ -4,13 +4,13 @@
 
 {% block content %}
 <div class="container mt-4" style="margin-top: 50px">
-    <h1 class="text-center mb-4">Меню</h1>
+    <h1 class="text-center mb-4 jumbotron">Каталог</h1>
     <div class="row">
         {% for product in products %}
-        <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow">
+        <div class="col-md-4 mb-4" style="margin-top: 10px;">
+            <div class="card h-100 shadow" style="color: white; background-color: black">
                 {% if product.image %}
-                <img src="{{ product.image.url }}" class="card-img-top img-fluid" alt="{{ product.title }}" style="object-fit: cover; height: 200px;">
+                <img src="{{ product.image.url }}" class="card-img-top img-fluid" alt="{{ product.title }}" style="object-fit: cover; height: 200px;" width: 200px;>
                 {% else %}
                 <img src="{% static 'app/content/temp.jpg' %}" class="card-img-top img-fluid" alt="{{ product.title }}" style="object-fit: cover; height: 200px;">
                 {% endif %}
@@ -25,11 +25,8 @@
                     {% endif %}
 
                     {% if not user.is_authenticated %}
-
                     <a href="{% url 'registration' %}" class="btn btn-success btn-sm">Регистрация</a>
-
                     {% endif %}
-
                 </div>
             </div>
         </div>

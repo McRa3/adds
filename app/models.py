@@ -63,10 +63,10 @@ class Comment(models.Model):
 admin.site.register(Comment)
 
 class Product(models.Model):
-    title = models.CharField(max_length=100, verbose_name="Название блюда")
-    description = models.TextField(default='', verbose_name="Описание")
-    image = models.FileField(default='temp.jpg', verbose_name="Путь к картинке")
-    price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="Цена")
+    title = models.CharField(max_length=100, verbose_name="Название услуги")
+    description = models.TextField(default='', verbose_name="Описание услуги")
+    image = models.FileField(default='temp.jpg', verbose_name="Путь к изображению")
+    price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="Стоимость")
 
     def get_absolute_url(self):
         return reverse("product", args=[str(self.id)])
@@ -76,8 +76,8 @@ class Product(models.Model):
 
     class Meta:
         db_table = "Products"
-        verbose_name = "блюдo"
-        verbose_name_plural = "блюда"
+        verbose_name ="услуги"
+        verbose_name_plural = "услуга"
 admin.site.register(Product)
 
 class Cart(models.Model): # просто карзина
@@ -98,10 +98,19 @@ class CartItem(models.Model): # хранит конкретные товары
     def total_price(self):
         return self.quantity * self.product.price
 
-class Order(models.Model): # после добавления в корзину
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    total_price = models.DecimalField(max_digits=10, decimal_places=2)
-    created_at = models.DateTimeField(auto_now_add=True)
+class Order(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Пользователь')
+    total_price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Общая стоимость')
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
+
+    def __str__(self):
+       return f'Заказ'
+
+    class Meta:
+        verbose_name = 'Заказ'
+        verbose_name_plural = 'Заказы'
+
+admin.site.register(Order)
 
 class OrderItem(models.Model): # хранит информацио о заказах пользователей 
     order = models.ForeignKey(Order, on_delete=models.CASCADE)

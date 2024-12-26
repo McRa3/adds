@@ -58,17 +58,28 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\static\app\content\back.avif" />
+    <Content Include="app\static\app\content\banner1_works.jpg" />
     <Content Include="app\static\app\content\banner2 %281%29.jpg" />
     <Content Include="app\static\app\content\banner2.jpg" />
+    <Content Include="app\static\app\content\banner2_works.jpg" />
+    <Content Include="app\static\app\content\banner3_works.jpg" />
     <Content Include="app\static\app\content\banner_1.jpg" />
     <Content Include="app\static\app\content\banner_2.jpg" />
     <Content Include="app\static\app\content\banner_3.jpg" />
     <Content Include="app\static\app\content\hall %281%29.jpg" />
+    <Content Include="app\static\app\content\links_1.jpg" />
+    <Content Include="app\static\app\content\links_2.jpg" />
+    <Content Include="app\static\app\content\links_3.png" />
     <Content Include="app\static\app\content\logo.jpg" />
+    <Content Include="app\static\app\content\Logo.png" />
     <Content Include="app\static\app\content\moscow %281%29.jpg" />
     <Content Include="app\static\app\content\moscow %282%29.jpg" />
     <Content Include="app\static\app\content\park %281%29.jpg" />
     <Content Include="app\static\app\content\Tripadvisor.svg" />
+    <Content Include="app\static\app\content\videopost_1.jpg" />
+    <Content Include="app\static\app\content\videopost_2.jpg" />
+    <Content Include="app\static\app\content\video_1.mp4" />
+    <Content Include="app\static\app\content\video_2.mp4" />
     <Content Include="app\static\app\content\zoon.svg" />
     <Content Include="app\static\app\content\слайд1.avif" />
     <Content Include="app\static\app\content\чиббис.jpeg" />

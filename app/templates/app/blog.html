@@ -1,10 +1,10 @@
 {% extends "app/layout.html" %}
 {% block content %}
-<h2 class="text-center" style="margin-top: 50px">{{ title }}</h2>
+<h2 class="text-center jumbotron" style="margin-top: 50px">{{ title }}</h2>
 <br />
 {% for post in posts %}
 <hr />
-<div class="">
+<div class="jumbotron">
     <h2>{{ post.title }}</h2>
     <h4>{{ post.posted }}</h4>
     <p>{{ post.description }}</p>

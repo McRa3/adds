@@ -42,7 +42,7 @@ input[type="checkbox"].input-validation-error {
 }
 
 .background {
-    background-image: url('back.avif');
+    background-color: white;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -60,5 +60,18 @@ input[type="checkbox"].input-validation-error {
 
 .jumbotron {
     margin-top: 20px;
-    color: black;
+    background-color: black;
+    color: white;
+}
+
+.btn-banner {
+    background-color: black;
+    color: white;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #000;
+    background-image: linear-gradient(to right, #000, #000, #000);
 }

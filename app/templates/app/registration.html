@@ -2,16 +2,18 @@
 
 {% block content %}
 <div class="container mt-4">
-    <h2 class="text-center mb-4">Регистрация пользователя</h2>
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <form method="POST" class="card p-4 shadow">
-                {% csrf_token %}
-                {{ regform.as_p }}
-                <div class="text-center mt-3">
-                    <button type="submit" class="btn btn-success">Зарегистрировать</button>
-                </div>
-            </form>
+    <div class="jumbotron">
+        <h2 class="text-center mb-4">Регистрация пользователя</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form method="POST" class="card p-4 shadow">
+                    {% csrf_token %}
+                    {{ regform.as_p }}
+                    <div class="text-center mt-3">
+                        <button type="submit" class="btn btn-success">Зарегистрироваться</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>

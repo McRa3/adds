@@ -2,13 +2,17 @@
 
 {% block content %}
 
-<h3 style="margin-top: 50px">Добавить статью</h3>
-<form method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
-    <div>
-        {{ blogform.as_p }}
-        <button type="submit" class="save btn btn-default">Сохранить статью</button>
+<div style="margin-top: 50px">
+    <div class="jumbotron">
+        <h3 style="margin-top: 50px">Добавить статью</h3>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div>
+                {{ blogform.as_p }}
+                <button type="submit" class="save btn btn-default">Сохранить статью</button>
+            </div>
+        </form>
     </div>
-</form>
+</div>
 
 {% endblock %}

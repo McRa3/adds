@@ -5,13 +5,13 @@
 {% load static %}
 
 <div class="jumbotron" style="margin-top: 50px">
-    <h1>Сад вкусов</h1>
+    <h1>OutdoorMediaHub</h1>
     <p class="lead">
-        Добро пожаловать в "Сад Вкусов" – место, где каждый уголок наполнен ароматами и вкусами, которые переносят вас в мир кулинарных наслаждений. Наш ресторан – это не просто заведение, а настоящий оазис, где вы можете насладиться изысканными блюдами, приготовленными с любовью и вниманием к каждой детали.
+        OutdoorMediaHub – ваш надежный партнер в мире наружной рекламы. Здесь каждый элемент тщательно продуман, чтобы привлекать внимание и оставлять незабываемое впечатление. Мы предлагаем инновационные решения, которые помогут вашему бренду выделиться и достичь новых высот. Наш сайт – это не просто платформа, а мощный инструмент для успешного продвижения вашего бизнеса. Погрузитесь в мир креативных идей и эффективных стратегий, созданных с любовью к деталям и стремлением к совершенству.
     </p>
 </div>
 
-<h1 style="text-align: center; margin-bottom: 20px">Атмосфера ресторана</h1>
+<h1 class="jumbotron" style="text-align: center; margin-bottom: 20px">Примеры размещений</h1>
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000" style="width: 1140px">
 
@@ -29,19 +29,13 @@
 
         <div class="item active">
 
-            <img src="{% static 'app/content/moscow (2).jpg'%} " alt="Первый слайд" class="img-responsive" />
+            <img src="{% static 'app/content/banner1_works.jpg'%} " alt="Первый слайд" class="img-responsive" />
 
             <div class="carousel-caption" role="option">
 
-                <p>
+                <a class="btn btn-default btn-banner" href="{% url 'product_list' %}">
 
-                    Зал в центре Москвы
-
-                </p>
-
-                <a class="btn btn-default" href="{% url 'contact' %}">
-
-                    Заказать столик
+                    Перейти в каталог
 
                 </a>
 
@@ -51,19 +45,13 @@
 
         <div class="item">
 
-            <img src="{% static 'app/content/hall (1).jpg'%}" alt="Второй слайд" class="img-responsive" />
+            <img src="{% static 'app/content/banner2_works.jpg'%}" alt="Второй слайд" class="img-responsive" />
 
             <div class="carousel-caption" role="option">
 
-                <p>
+                <a class="btn btn-default btn-banner" href="{% url 'product_list' %}">
 
-                    Зал с камином
-
-                </p>
-
-                <a class="btn btn-default" href="{% url 'contact' %}">
-
-                    Заказать столик
+                    Перейти в каталог
 
                 </a>
 
@@ -73,21 +61,13 @@
 
         <div class="item">
 
-            <img src=" {% static 'app/content/park (1).jpg'%} " alt="Третий слайд" class="img-responsive" />
+            <img src=" {% static 'app/content/banner3_works.jpg'%} " alt="Третий слайд" class="img-responsive" />
 
             <div class="carousel-caption" role="option">
 
-                <p>
+                <a class="btn btn-default btn-banner" href="{% url 'product_list' %}">
 
-                    Ресторан в парке Горького, Москва
-
-
-
-                </p>
-
-                <a class="btn btn-default" href="{% url 'contact' %}">
-
-                    Заказать столик
+                   Перейти в каталог
 
                 </a>
 

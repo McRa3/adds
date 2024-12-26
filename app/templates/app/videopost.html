@@ -3,26 +3,28 @@
 {% load static %}
 
 {% block content %}
-<div>
-    <b>{{ title }}</b>
-</div>
+<div class="jumbotron">
+    <div>
+        <b>{{ title }}</b>
+    </div>
 
-<hr />
+    <hr />
 
-<div class="column">
-    <h2>Ужин в ресторане:</h2>
-    <VIDEO src="/media/обед.mp4" controls="controls" width="400" height="300" poster="/media/превью_1.jpg"></VIDEO>
-    <p> <br /> Насладитесь романтической обстановкой у нас. <i> Средний чек составляет 700 рублей.</i></p>
-</div>
+    <div class="column">
+        <h2>Наружная реклама тц:</h2>
+        <VIDEO src="/media/video_1.mp4" controls="controls" width="400" height="300" poster="/media/videopost_1.jpg"></VIDEO>
+        <p> <br /> Пример размещения наружной рекламы в тц. <i> Стоимость от 3000 рублей за установку.</i></p>
+    </div>
 
-<hr />
+    <hr />
 
-<div class="column">
-    <h2>Огромный выбор алкогольных напитков</h2>
-    <VIDEO src="/media/бокалы.mp4" controls="controls" width="400" height="300" poster="/media/превью_2.jpg"></VIDEO>
-    <p>
-        <br />
-        У нас пополнение в баре.<i>Стоимость от 200 рубелй за бокал.</i>
-    </p>
+    <div class="column">
+        <h2>Наружная реклама отеля:</h2>
+        <VIDEO src="/media/video_2.mp4" controls="controls" width="400" height="300" poster="/media/videopost_2.jpg"></VIDEO>
+        <p>
+            <br />
+            Процесс установки наружной рекламы отеля.<i>Стоимость от 3000 рублей за установку.</i>
+        </p>
+    </div>
 </div>
 {% endblock %}

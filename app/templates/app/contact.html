@@ -1,28 +1,27 @@
 ﻿{% extends "app/layout.html" %}
 
 {% block content %}
-
-<h2 style="margin-top: 50px">{{ title }}.</h2>
-<h3>{{ message }}</h3>
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <h4>Наш адрес</h4>
-            <address>
-                <strong>Сад вкусов</strong><br />
-                Инженерная, 110<br />
-                <abbr title="Phone">Телефон:</abbr> 79113664383
-                <br>
-                <abbr title="Phone">Другой телефон:</abbr> 425.555.0100
-            </address>
-        </div>
-        <div class="col-md-6">
-            <h4>Контакты</h4>
-            <address>
-                <strong>Техническая поддержка:</strong> <a href="mailto:Support@example.com">pdanilap@inbox.ru</a><br />
-                <strong>Отдел маркетинга:</strong> <a href="mailto:Marketing@example.com">potapovdaniil@gmail.com</a>
-            </address>
+<div style="margin-top: 50px">
+    <div class="jumbotron">
+        <h2>{{ title }}.</h2>
+        <h3>{{ message }}</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Наш адрес</h4>
+                <address>
+                    <strong>OutdoorMediaHub</strong><br />
+                    г. Москва, Цветной Бульвар, 30 стр.1<br />
+                    <abbr title="Phone">Телефон:</abbr> +7 (800) 505 59 42<br />
+                    <abbr title="Phone">Другой телефон:</abbr> +7 (800) 505 50 40
+                </address>
+            </div>
+            <div class="col-md-6">
+                <h4>Контакты</h4>
+                <address>
+                    <strong>Техническая поддержка:</strong> <a href="mailto:technicalsupport@outdoormediahub.com">technicalsupport@outdoormediahub.com</a><br />
+                    <strong>Отдел маркетинга:</strong> <a href="mailto:marketing@outdoormediahub.com">marketing@outdoormediahub.com</a>
+                </address>
+            </div>
         </div>
     </div>
 </div>

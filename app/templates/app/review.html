@@ -1,53 +1,65 @@
 {% extends "app/layout.html" %}
 
 {% block content %}
-<div class="container mt-4" style="margin-top: 50px">
-    {% if form != None %}
-    <h2 class="text-center mb-4">Оставьте, пожалуйста, ваш отзыв!</h2>
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <form method="post" class="card p-4 shadow">
-                {% csrf_token %}
-                <div class="form-group">
-                    <label for="{{ form.name.id_for_label }}">Имя:</label>
-                    {{ form.name }}
-                    <div class="text-danger">{{ form.name.errors }}</div>
-                </div>
-                <div class="form-group">
-                    <label for="{{ form.city.id_for_label }}">Город:</label>
-                    {{ form.city }}
-                    <div class="text-danger">{{ form.city.errors }}</div>
-                </div>
-                <div class="form-group">
-                    <label for="{{ form.rating.id_for_label }}">Рейтинг:</label>
-                    {{ form.rating }}
-                    <div class="text-danger">{{ form.rating.errors }}</div>
-                </div>
-                <div class="form-group">
-                    <label for="{{ form.notice.id_for_label }}">Заголовок:</label>
-                    {{ form.notice }}
-                    <div class="text-danger">{{ form.notice.errors }}</div>
-                </div>
-                <div class="form-group">
-                    <label for="{{ form.email.id_for_label }}">Email:</label>
-                    {{ form.email }}
-                    <div class="text-danger">{{ form.email.errors }}</div>
-                </div>
-                <div class="form-group">
-                    <label for="{{ form.message.id_for_label }}">Сообщение:</label>
-                    {{ form.message }}
-                    <div class="text-danger">{{ form.message.errors }}</div>
-                </div>
-                <div class="text-center">
-                    <button type="submit" class="btn btn-success">Отправить</button>
-                </div>
-            </form>
+<div style="margin-top: 50px">
+    <div class="container mt-4 jumbotron">
+        {% if form %}
+        <h2 class="text-center mb-4">Оставьте, пожалуйста, ваш отзыв!</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form method="post" class="card p-4 shadow">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="{{ form.name.id_for_label }}">Имя:</label>
+                        {{ form.name }}
+                        <div class="text-danger">{{ form.name.errors }}</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="{{ form.city.id_for_label }}">Город:</label>
+                        {{ form.city }}
+                        <div class="text-danger">{{ form.city.errors }}</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="{{ form.rating.id_for_label }}">Рейтинг:</label>
+                        {{ form.rating }}
+                        <div class="text-danger">{{ form.rating.errors }}</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="{{ form.notice.id_for_label }}">Заголовок:</label>
+                        {{ form.notice }}
+                        <div class="text-danger">{{ form.notice.errors }}</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="{{ form.email.id_for_label }}">Email:</label>
+                        {{ form.email }}
+                        <div class="text-danger">{{ form.email.errors }}</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="{{ form.message.id_for_label }}">Сообщение:</label>
+                        {{ form.message }}
+                        <div class="text-danger">{{ form.message.errors }}</div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-success">Отправить</button>
+                    </div>
+                </form>
+            </div>
         </div>
+        {% else %}
+        <h2 class="text-center mt-4">Благодарим за ваш отзыв!</h2>
+        <div class="card p-4 shadow mt-4">
+            <p><strong>Имя:</strong> {{ data.name }}</p>
+            <p><strong>Город:</strong> {{ data.city }}</p>
+            <p><strong>Рейтинг:</strong> {{ data.rating }}</p>
+            <p><strong>Заголовок:</strong> {{ data.notice }}</p>
+            <p><strong>Email:</strong> {{ data.email }}</p>
+            <p><strong>Сообщение:</strong> {{ data.message }}</p>
+        </div>
+        {% endif %}
     </div>
-    {% else %}
-    <h2 class="text-center mt-4">Благодарим, {{ data.name }}, за ваш отзыв! </h2>
-    {% endif %}
 </div>
+
+
 
 <script>
     const submitBtn = document.querySelector('button[type="submit"]');
